@@ -1,19 +1,19 @@
 meta {
-  name: Register
+  name: Login
   type: http
-  seq: 2
+  seq: 3
 }
 
 post {
-  url: {{url}}/register
+  url: {{url}}/login
   body: json
   auth: none
 }
 
 body:json {
   {
-    "name": "BeBee",
+    "login_method": "phone",
     "phone": "09769274236",
-    "password" : "bebee7121"
+    "password": "bebee7121"
   }
 }
