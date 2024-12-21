@@ -1,0 +1,23 @@
+meta {
+  name: Get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/main-categories
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept: application/json
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+docs {
+  you can add ?query=sub-categories to get sub-categories together 
+}

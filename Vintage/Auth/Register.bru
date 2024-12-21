@@ -1,7 +1,7 @@
 meta {
   name: Register
   type: http
-  seq: 2
+  seq: 1
 }
 
 post {
@@ -10,10 +10,14 @@ post {
   auth: none
 }
 
+headers {
+  Accept: application/json
+}
+
 body:json {
   {
     "name": "BeBee",
     "phone": "09769274236",
-    "password" : "bebee7121"
+    "password": "bebee7121"
   }
 }
