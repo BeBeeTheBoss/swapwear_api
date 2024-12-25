@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/main-categories
+  url: {{url}}/main-categories/1?with=sub-categories
   body: none
   auth: bearer
+}
+
+params:query {
+  with: sub-categories
 }
 
 headers {

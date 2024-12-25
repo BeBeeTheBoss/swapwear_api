@@ -1,0 +1,19 @@
+meta {
+  name: Get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/sub-categories?with=main-category
+  body: none
+  auth: bearer
+}
+
+params:query {
+  with: main-category
+}
+
+auth:bearer {
+  token: {{token}}
+}
