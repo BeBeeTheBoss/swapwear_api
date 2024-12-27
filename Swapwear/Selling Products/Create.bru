@@ -12,6 +12,7 @@ post {
 
 headers {
   Accept: application/json
+  Content-Type: application/json
 }
 
 auth:bearer {
@@ -30,5 +31,12 @@ body:json {
 }
 
 body:multipart-form {
-  : 
+  sub_category_id: 1
+  name: Okay2
+  description: okay pr dl2
+  condition: new
+  price: 23000
+  quantity: 1
+  images[0]: @file(C:\Users\BeBee\Downloads\business_logo.png)
+  images[1]: @file(C:\Users\BeBee\Downloads\bag.png)
 }

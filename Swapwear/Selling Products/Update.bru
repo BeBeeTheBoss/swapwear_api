@@ -1,0 +1,42 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/selling-products/update
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 3,
+    "sub_category_id": 1,
+    "name": "Okay",
+    "description": "Okay pr dl",
+    "condition": "new",
+    "price": 21000,
+    "quantity": 2
+  }
+}
+
+body:multipart-form {
+  sub_category_id: 1
+  name: Okay update
+  description: Okay nw
+  condition: used
+  quantity: 2
+  price: 200002
+  status: selling
+  id: 6
+  deleted_images[0]: 76
+  deleted_images[1]: 77
+  ~images[0]: @file(C:\Users\BeBee\Downloads\bag.png)
+  ~deleted_images[2]: 75
+}

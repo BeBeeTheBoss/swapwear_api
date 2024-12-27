@@ -1,19 +1,21 @@
 meta {
-  name: Get
+  name: Delete
   type: http
-  seq: 1
+  seq: 4
 }
 
-get {
+delete {
   url: {{url}}/selling-products
-  body: none
+  body: json
   auth: bearer
-}
-
-params:query {
-  ~with: sub-category
 }
 
 auth:bearer {
   token: {{token}}
+}
+
+body:json {
+  {
+    "id": 6
+  }
 }
