@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{url}}/selling-products
-  body: json
+  body: multipartForm
   auth: bearer
 }
 
@@ -27,4 +27,8 @@ body:json {
     "price": 23000,
     "quantity": 1
   }
+}
+
+body:multipart-form {
+  : 
 }
