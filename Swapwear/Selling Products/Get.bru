@@ -17,3 +17,14 @@ params:query {
 auth:bearer {
   token: {{token}}
 }
+
+docs {
+  /{id} for get specific selling product
+  
+  ?with=sub-category for get related sub category
+  
+  ?with=user for get related user
+  
+  *** /{id}?with=sub-category,user ***
+  you can comine these all queries
+}

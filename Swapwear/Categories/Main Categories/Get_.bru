@@ -1,0 +1,24 @@
+meta {
+  name: Get_
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/main-categories
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+docs {
+  ?with=sub-categories for get related sub category
+  
+  /{id} for get specfic main category 
+  
+  *** /{id}?with=sub-categories ****
+  you can combine url query with populated query
+}

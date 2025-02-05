@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{url}}/sub-categories/1?with=main-category
+  url: {{url}}/sub-categories/2?with=main-category
   body: none
   auth: bearer
 }
@@ -16,4 +16,12 @@ params:query {
 
 auth:bearer {
   token: {{token}}
+}
+
+docs {
+  ?with=main-category for get related main category
+  
+  /{id} for get specfic sub category
+  
+  *** /{id}?with=main-category **** you can combine url query with populated query
 }
