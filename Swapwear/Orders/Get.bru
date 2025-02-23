@@ -5,14 +5,9 @@ meta {
 }
 
 get {
-  url: {{url}}/orders?with=user&pov=user
+  url: {{url}}/orders
   body: json
   auth: bearer
-}
-
-params:query {
-  with: user
-  pov: user
 }
 
 headers {
