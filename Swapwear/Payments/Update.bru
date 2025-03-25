@@ -1,0 +1,22 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/payments/update
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 1,
+    "name": "K-Pay"
+  }
+}
