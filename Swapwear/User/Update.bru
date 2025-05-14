@@ -1,0 +1,30 @@
+meta {
+  name: Update
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/users/update
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "BeBee",
+    "phone": "09769274236",
+    "bio" : "hello",
+    "address": "yangon"
+  }
+}
+
+docs {
+  nokey is required
+  
+  you can only add key what you want to change
+}

@@ -1,0 +1,19 @@
+meta {
+  name: UpdateProfile
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/users/update-profile
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  image: @file(C:\Users\USER\Downloads\photo_2025-05-03_09-55-08 (1).jpg)
+}

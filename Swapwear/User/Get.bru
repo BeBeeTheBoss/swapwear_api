@@ -1,0 +1,23 @@
+meta {
+  name: Get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/users/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+docs {
+  /id for get specific user
+  
+  ?name="" for filter by name
+  
+  ?phone="" for filter by phone
+}
