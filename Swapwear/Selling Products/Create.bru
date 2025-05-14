@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{url}}/selling-products
-  body: json
+  body: multipartForm
   auth: bearer
 }
 
@@ -47,6 +47,6 @@ body:multipart-form {
   condition: new
   price: 23000
   quantity: 1
-  images[0]: @file(C:\Users\Hp\Downloads\application.png)
-  images[1]: @file()
+  ~images[0]: @file(C:\Users\Hp\Downloads\application.png)
+  ~images[1]: @file()
 }

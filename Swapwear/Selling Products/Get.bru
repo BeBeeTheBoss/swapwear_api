@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/selling-products
+  url: {{url}}/selling-products?sub-category-id=1
   body: none
   auth: bearer
 }
 
 params:query {
+  sub-category-id: 1
   ~with: sub-category
 }
 
@@ -24,6 +25,8 @@ docs {
   ?with=sub-category for get related sub category
   
   ?with=user for get related user
+  
+  ?sub-category-id=1 for filter by sub-category
   
   *** /{id}?with=sub-category,user ***
   you can comine these all queries
