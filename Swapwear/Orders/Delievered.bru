@@ -1,0 +1,21 @@
+meta {
+  name: Delievered
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/orders/delivered
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

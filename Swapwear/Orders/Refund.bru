@@ -1,0 +1,22 @@
+meta {
+  name: Refund
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{url}}/orders/refund
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 1,
+    "note": "Ma wel chin dot loh kwr"
+  }
+}

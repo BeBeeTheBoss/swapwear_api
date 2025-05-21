@@ -1,0 +1,21 @@
+meta {
+  name: Make Payment
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/orders/make-payment
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  id: 1
+  payment_id: 1
+  payment_screenshot: @file(C:\Users\USER\Downloads\photo_2025-05-03_09-55-08 (1).jpg)
+}

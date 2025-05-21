@@ -1,0 +1,21 @@
+meta {
+  name: Reject
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/orders/reject
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

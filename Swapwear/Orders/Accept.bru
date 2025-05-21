@@ -1,0 +1,21 @@
+meta {
+  name: Accept
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/orders/accept
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}

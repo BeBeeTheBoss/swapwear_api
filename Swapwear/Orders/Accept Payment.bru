@@ -1,0 +1,21 @@
+meta {
+  name: Accept Payment
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/orders/accept-payment
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": 1
+  }
+}
