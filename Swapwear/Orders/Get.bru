@@ -17,3 +17,12 @@ headers {
 auth:bearer {
   token: {{token}}
 }
+
+docs {
+  ?pov=user for get user's orders
+  ?pov=seller for get seller's orders which are requested from users
+  
+  ?with=user for get related user data
+  ?with=seller for get related seller data
+  you can combine url query with populated query
+}
