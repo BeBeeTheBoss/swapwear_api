@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/orders
+  url: {{url}}/orders?with=selling-product
   body: json
   auth: bearer
+}
+
+params:query {
+  with: selling-product
 }
 
 headers {
@@ -20,9 +24,14 @@ auth:bearer {
 
 docs {
   ?pov=user for get user's orders
+  
   ?pov=seller for get seller's orders which are requested from users
   
   ?with=user for get related user data
+  
   ?with=seller for get related seller data
+  
+  ?with=selling-product for get related selling product data
+  
   you can combine url query with populated query
 }
