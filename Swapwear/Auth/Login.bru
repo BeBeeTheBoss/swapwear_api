@@ -12,8 +12,37 @@ post {
 
 body:json {
   {
-    "login_method": "phone",
-    "phone": "09769274236",
-    "password": "bebee7121"
+    "login_method": "facebook",
+    "oauth_id": "ueorej2323oi2323",
+    "oauth_type": "facebook",
+    "oauth_image": null
   }
+}
+
+docs {
+  key is login method
+  
+  
+  login method = phone for login with phone other for oauth 
+  
+  
+  fillable fields for phone
+  login_method(Required)
+  
+  phone(Required)
+  
+  password(Required)
+  
+  
+  fillable fields for ouath(eg.facebook)
+  
+  login_method(Required)
+  
+  name(Required)
+  
+  oauth_id(Required)
+  
+  oauth_type(Required)
+  
+  oauth_image(Nullable)
 }
