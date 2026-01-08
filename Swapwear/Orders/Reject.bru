@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{url}}/orders/reject
-  body: json
+  body: multipartForm
   auth: bearer
 }
 
@@ -18,4 +18,10 @@ body:json {
   {
     "id": 1
   }
+}
+
+body:multipart-form {
+  id: 1
+  payment_return_screenshot: @file()
+  reject_note: 
 }
